@@ -1,0 +1,10 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\.md]
+@="typora.md"
+"icon"="你的typora安装目录下的typora.exe文件"
+[HKEY_CLASSES_ROOT\.md\OpenWithProgids]
+"Typora.md"=""
+
+[HKEY_CLASSES_ROOT\.md\ShellNew]
+"NullFile"=""
