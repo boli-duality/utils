@@ -4,7 +4,7 @@
 
 在桌面新建文本文件（.txt）并打开，将如下代码粘贴进去。
 
-> ==注意：==其中的 icon 一定是自己 typora 的位置。
+> 注意：其中的 icon 一定是自己 typora 的位置。
 
 ```apl
 Windows Registry Editor Version 5.00
