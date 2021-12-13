@@ -13,7 +13,7 @@
  *    使用: this.$_query(this).select('selector').property
  *          this.$_query().select('selector').property
  *          this.$_query('selector').property (推荐)
- * @param {Object/String} that 传入组件实例对象，或在this调用时直接传入选择器字符串也可不c
+ * @param {Object/String} that 传入组件实例对象，或在this调用时直接传入选择器字符串也可不传
  */
 ```
 
