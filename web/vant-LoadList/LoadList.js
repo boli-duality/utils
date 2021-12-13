@@ -32,7 +32,6 @@ class LoadList {
       this.list[index].refresh = false
       this.list[index].total = res.total
       this.list[index].list = res.rows
-      console.log(this.list[index].total)
     })
   }
 

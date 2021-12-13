@@ -19,9 +19,11 @@
  */
 function request (options) {
   return new Promise((resolve, reject) => {
+    // 请求拦截
     let { success, fail } = options
     uni.request({
       ...options,
+      // 响应拦截
       success (res) {
         res = res.data.data
         success && success(res)
