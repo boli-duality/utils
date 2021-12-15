@@ -60,6 +60,11 @@ function query (that) {
           nodeInfo = data
         })
         .exec()
+      // #ifdef MP
+        setTimeout(() => {
+          return nodeInfo
+        }, 10);
+      // #endif
       return nodeInfo
     }
     return {

@@ -1,5 +1,9 @@
 #  uni.createSelectorQuery() 封装
 
+> 仅对api进行了最粗略的封装，只实现了select功能
+>
+> 后续会进行完善
+
 ```javascript
 /**
  * 对uniapp获取节点信息方法 uni.createSelectorQuery() 的二次封装
