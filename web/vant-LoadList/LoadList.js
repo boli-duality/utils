@@ -7,11 +7,11 @@ class LoadList {
   /**
    * 初始化LoadList类
    * @param {Array} list 传入列表，要求是个数组，以实现多列表模式
-   * @param {Function} handle 传入一个Promise封装的请求方法
+   * @param {Function} apiHandle 传入一个Promise封装的请求方法
    */
-  constructor (list, handle) {
+  constructor (list, apiHandle) {
     this.list = list
-    this.handle = handle
+    this.apiHandle = apiHandle
   }
 
   /**
@@ -28,7 +28,7 @@ class LoadList {
       limit: this.list.limit,
       start: this.list.start
     }
-    this.handle(params).then(res => {
+    this.apiHandle(params).then(res => {
       this.list[index].refresh = false
       this.list[index].total = res.total
       this.list[index].list = res.rows
@@ -48,7 +48,7 @@ class LoadList {
       limit: this.list[index].limit,
       start: this.list[index].list.length
     }
-    this.handle(params).then(res => {
+    this.apiHandle(params).then(res => {
       // 关闭vant列表的加载更多
       this.list[index].loadmore = false
       this.list[index].total = res.total
