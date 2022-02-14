@@ -1,0 +1,3 @@
+let num = document.querySelector("#image_width").value;
+document.querySelector("#image_height").value = 1;
+document.querySelector("#image_width").value = num * 100;
