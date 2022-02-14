@@ -1,7 +1,7 @@
 /**
  * vue版的节流函数初始化函数
  * @property {Number} defaultDelay = [500] 默认延迟时间
- * @property {BooleanF} defaultImmediately = [true] 默认延迟时间
+ * @property {Boolean} defaultImmediately = [true] 默认延迟时间
  * @returns {Function} vue版的节流函数
  */
  function initThrottle({ delay = 500, immediately = true } = {}) {
