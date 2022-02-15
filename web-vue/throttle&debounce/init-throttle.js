@@ -1,10 +1,11 @@
 /**
  * vue版的节流函数初始化函数
- * @property {Number} defaultDelay = [500] 默认延迟时间
- * @property {Boolean} defaultImmediately = [true] 默认延迟时间
+ * @author 游博林 @2022-2-15 18:56
+ * @property {Number} delay = [500] 默认节流延迟时间
+ * @property {Boolean} immediately = [true] 是否立即执行
  * @returns {Function} vue版的节流函数
  */
-function initThrottle({ delay = 500, immediately = true } = {}) {
+ function initThrottle({ delay = 500, immediately = true } = {}) {
   const defaultDelay = delay
   const defaultImmediately = immediately
   const ID = Symbol('defaultID')
@@ -14,7 +15,7 @@ function initThrottle({ delay = 500, immediately = true } = {}) {
    * @param {Function} fn 需要节流的函数
    * @param {Object} options 配置选项
    * @property {Array} params of options 需要节流的函数的参数
-   * @property {Number} delay of options 延迟时间
+   * @property {Number} delay of options 节流延迟时间
    * @property {Boolean} immediately of options 是否立即执行
    * @property {String|Number} id of options 传入id启用不同的节流函数
    */
