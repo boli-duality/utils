@@ -21,12 +21,12 @@ function initDebounce({ delay = 1000, immediate = true } = {}) {
    */
   return function debounce(fn, { params, delay, immediate, id = ID } = {}) {
     if (typeof fn !== 'function') return console.error('[throttle warn]: TypeError: The First parameter is not a function')
-    const isimmediate = immediate ?? defaultImmediate
-    if (isimmediate && !timeoutID[id]) fn.apply(this, params)
+    const isImmediate = immediate ?? defaultImmediate
+    if (isImmediate && !timeoutID[id]) fn.apply(this, params)
     clearTimeout(timeoutID[id])
     timeoutID[id] = setTimeout(() => {
-      if (!isimmediate) fn.apply(this, params)
-      if (isimmediate) timeoutID[id] = void 0
+      if (!isImmediate) fn.apply(this, params)
+      if (isImmediate) timeoutID[id] = void 0
     }, delay ?? defaultDelay)
   }
 }

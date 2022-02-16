@@ -22,11 +22,11 @@
   return function throttle(fn, { params, delay, immediate, id = ID } = {}) {
     if (typeof fn !== 'function') return console.error('[throttle warn]: TypeError: The First parameter is not a function')
     if (isDoThrottle[id]) return
-    const isimmediate = immediate ?? defaultImmediate
+    const isImmediate = immediate ?? defaultImmediate
     isDoThrottle[id] = true
-    isimmediate && fn.apply(this, params)
+    isImmediate && fn.apply(this, params)
     setTimeout(() => {
-      !isimmediate && fn.apply(this, params)
+      !isImmediate && fn.apply(this, params)
       isDoThrottle[id] = false
     }, delay ?? defaultDelay);
   }
