@@ -1,6 +1,6 @@
 /**
  * vue版的防抖函数初始化函数
- * @author 游博林 @2022-2-16 1:42
+ * @author 游博林 @2022-2-16 01:42
  * @property {Number} delay = [500] 默认防抖延迟时间
  * @property {Boolean} immediate = [true] 是否立即执行
  * @returns {Function} debounce vue版的防抖函数
